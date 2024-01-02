@@ -16,7 +16,7 @@
 
 
   
-- name: restart
+- name: copy catalogue service and sysytemd
   ansible.builtin.import_role:
     name: comman
     tasks_from: systemd.yaml
