@@ -9,11 +9,6 @@
     name: comman
     tasks_from: node-js setup
 
-
-
-
-
-
 - name: mongodb setup
   ansible.builtin.import_role:
     name: comman
