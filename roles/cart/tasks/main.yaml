@@ -1,0 +1,22 @@
+- name: app set-up
+  ansible.builtin.import_role:
+    name: comman
+    tasks_from: app-setup.yaml
+
+
+- name: nodejs setup
+  ansible.builtin.import_role:
+    name: comman
+    tasks_from: node-js setup
+
+# - name: mongodb setup
+#   ansible.builtin.import_role:
+#     name: comman
+#     tasks_from: mongodb-setup.yaml
+
+
+  
+- name: copy cart service and sysytemd
+  ansible.builtin.import_role:
+    name: comman
+    tasks_from: systemd.yaml
