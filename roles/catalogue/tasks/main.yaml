@@ -4,7 +4,7 @@
     tasks_from: app-setup.yaml
 
 
-- name: app set-up
+- name: nodejs setup
   ansible.builtin.import_role:
     name: comman
     tasks_from: node-js setup
@@ -13,5 +13,10 @@
   ansible.builtin.import_role:
     name: comman
     tasks_from: mongodb-setup.yaml
-  
 
+
+  
+- name: restart
+  ansible.builtin.import_role:
+    name: comman
+    tasks_from: systemd.yaml
