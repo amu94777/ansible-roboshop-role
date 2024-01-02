@@ -1,7 +1,7 @@
 - name: app set-up
   ansible.builtin.import_role:
     name: comman
-    tasks_from: app-setup
+    tasks_from: app-setup.yaml
 
 
 - name: app set-up
@@ -11,4 +11,12 @@
 
 
 
+
+
+
+- name: mongodb setup
+  ansible.builtin.import_role:
+    name: comman
+    tasks_from: mongodb-setup.yaml
+  
 
